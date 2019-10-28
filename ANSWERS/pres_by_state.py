@@ -4,8 +4,8 @@ with open("../DATA/presidents.txt") as pres_in:
     count_of = {}
 
     for rec in pres_in:
-        flds = rec.split(":")
-        state = flds[6]
+        fields = rec.split(":")
+        state = fields[6]
         if state in count_of:
             count_of[state] += 1
         else:
