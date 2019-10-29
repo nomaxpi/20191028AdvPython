@@ -2,6 +2,7 @@
 
 a = 0b10101010  # <1>
 b = 0b11110000
+print(a, b)
 
 c = a & b  # <2>
 print("  {:08b}".format(a))
@@ -48,3 +49,10 @@ c = a << 3 # <9>
 print("{:012b} << 3".format(a))
 print("{:012b}".format(c))
 print()
+
+import re
+
+re.search('mypattern', 'mytext', re.I | re.M)
+
+print(bin(re.I), bin(re.M))
+print(bin(re.I | re.M))

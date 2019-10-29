@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import os
+from datetime import datetime
 from humanize import naturalsize
 
 FOLDER = "DATA"
@@ -16,6 +17,10 @@ print("file size:", file_size)
 print("file size:", naturalsize(file_size))
 print("is it a file? ", os.path.isfile(file_path))
 print("is it a folder? ", os.path.isdir(file_path))
+raw_timestamp = os.path.getmtime(file_path)
+print("raw timestamp:", raw_timestamp)
+timestamp = datetime.fromtimestamp(raw_timestamp)
+print("timestamp:", timestamp)
 print()
 
 for name in 'fruity.txt', 'DATA/fruity.txt', 'wombats.txt', 'DATA':

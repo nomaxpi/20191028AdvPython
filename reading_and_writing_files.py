@@ -10,7 +10,7 @@ mary_in = open('DATA/mary.txt')
 #  process file
 mary_in.close()
 
-with open('DATA/mary.txt') as mary_in:
+with open('DATA/mary.txt', 'r') as mary_in:
     contents = mary_in.read()
     print("raw:")
     print(repr(contents))

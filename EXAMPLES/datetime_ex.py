@@ -3,8 +3,11 @@
 from datetime import datetime, date, timedelta
 
 print("date.today():", date.today())  # <1>
+today = date.today()
+print(today.year)
 
 now = datetime.now()  # <2>
+print(now)
 print("now.day:", now.day)  # <3>
 print("now.month:", now.month)
 print("now.year:", now.year)
