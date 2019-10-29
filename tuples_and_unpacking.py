@@ -39,6 +39,47 @@ people = [
     ('Linus', 'Torvalds', 'Linux', '1969-12-28'),
 ]
 
+print(type(people))
+print(people[0])
+print(type(people[0]))
+print(people[0][0])
+print(type(people[0][0]))
+print(people[0][0][0])
+print()
+
+for first_name, last_name, *_ in people:
+    print(first_name, last_name)
+
+print()
+
+
+x = ['wombat', 'moose', 'platypus']
+
+for i in range(len(x)):
+    print(x[i])
+print()
+
+for animal in x:
+    print(animal)
+print()
+
+data = [('Raleigh', 'NC'), ("Baton Rouge", "LA"),
+        ("Boston", "MA"), ("Sacramento", "CA"), ("Lansing", "MI")]
+
+for capital, state in data:
+    print(f"{capital} is the capital of {state}")
+print()
+
+for i, animal in enumerate(x):
+    print(i, animal)
+print()
+
+print(list(enumerate(x)), '\n')
+
+# for var, var, .... in iterable:
+#      ....
+
+
 
 
 

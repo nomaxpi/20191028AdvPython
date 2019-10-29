@@ -20,3 +20,8 @@ def get_salary_data_as_list(max_rows=None):
                 break
             row[-1] = float(row[-1][1:])
             yield row  # make this function a generator
+
+if __name__ == '__main__':
+    salary_gen = get_salary_data_as_list(10)
+    for row in salary_gen:
+        print(row)
