@@ -1,8 +1,15 @@
 #!/usr/bin/env python
+"""
+Provide CardDeck class
+"""
 import random
-from typing import Union, Iterable, List
+from typing import Union, List
+from collections import defaultdict
 
 class CardDeck:  # inherits from object
+    """
+    Implement deck of 52 cards with draw and shuffle methods.
+    """
     #  __init__()
     RANKS = '2 3 4 5 6 7 8 9 10 J Q K A'.split()
     SUITS = 'clubs diamonds hearts spades'.split()
@@ -13,6 +20,11 @@ class CardDeck:  # inherits from object
         self._make_deck()
 
     def _make_deck(self):
+        """
+        Create initial deck of cards
+
+        :return:
+        """
         self._cards = list()
         for suit in self.SUITS:
             for rank in self.RANKS:
@@ -22,9 +34,19 @@ class CardDeck:  # inherits from object
 
     # instance method
     def shuffle(self):  # self is current instance
+        """
+        Randomize the deck
+
+        :return: None
+        """
         random.shuffle(self._cards)
 
     def draw(self):
+        """
+        Retrieve one card from deck
+
+        :return: Card as a tuple
+        """
         return self._cards.pop()  # remove 1 card and return it
 
     @property
@@ -45,7 +67,7 @@ class CardDeck:  # inherits from object
         else:
             raise TypeError("Dealer must be a string")
 
-    def spam(self, x: Union[int, float]) -> float:
+    def spam(self, item: Union[int, float]) -> float:
         pass
 
     def ham(self, thing: List[str]) -> None:

@@ -29,3 +29,6 @@ def get_full_name(self):
 setattr(President, "get_full_name", get_full_name)
 
 print(p.get_full_name())
+
+delattr(p, 'get_full_name')
+
