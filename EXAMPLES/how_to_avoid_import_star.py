@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import electrical as e  # <1>
-import navigation as n  # <2>
+import electrical as elec  # <1>
+import navigation as nav  # <2>
 
-print(e.current())  # <3>
-print(n.current())  # <4>
+print(elec.current())  # <3>
+print(nav.current())  # <4>

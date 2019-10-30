@@ -1,7 +1,5 @@
 #!/usr/bin/env python
-
 import inspect
-
 
 class Spam:  # <1>
     pass
