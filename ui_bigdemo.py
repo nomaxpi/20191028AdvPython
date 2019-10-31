@@ -68,6 +68,7 @@ class Ui_BigDemo(object):
         self.menubar.addAction(self.menuEdit.menuAction())
 
         self.retranslateUi(BigDemo)
+        self.actionQuit.triggered.connect(BigDemo.close)
         QtCore.QMetaObject.connectSlotsByName(BigDemo)
 
     def retranslateUi(self, BigDemo):

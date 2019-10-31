@@ -18,7 +18,7 @@ def get_salary_data_as_list(max_rows=None):
         for i, row in enumerate(rdr):
             if (max_rows is not None) and (i == max_rows):
                 break
-            row[-1] = float(row[-1][1:])
+            row[-1] = float(row[-1][1:]) # turn "$999.99" into float
             yield row  # make this function a generator
 
 if __name__ == '__main__':

@@ -13,3 +13,4 @@ def doit(num):  # <1>
 for i in range(10):
     t = threading.Thread(target=doit, args=(i,))  # <2>
     t.start()  # <3>
+print("Threads launched")

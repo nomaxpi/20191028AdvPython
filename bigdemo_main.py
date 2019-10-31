@@ -15,10 +15,14 @@ class BigDemoMain(QMainWindow):
         self.ui.setupUi(self)
 
         # Connect up menu actions
-        # self.ui.actionExit.triggered.connect(self.close)
+        #   self.ui.actionQuit.triggered.connect(self.close)
 
         # Connect up buttons.
         # self.ui.BUTTON_NAME.clicked.connect(self._pushed)
+        self.ui.button_go.clicked.connect(self._pushed)
+
+    def _pushed(self):
+        print("You pushed the button")
 
 
 if __name__ == '__main__':

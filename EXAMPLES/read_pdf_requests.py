@@ -22,3 +22,6 @@ if response.status_code == requests.codes.OK:  # <4>
         cmd = 'acroread ' + saved_pdf_file
 
     os.system(cmd)  # <8>
+
+else:
+    print("Unable to open...")

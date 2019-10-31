@@ -80,8 +80,15 @@
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
    </widget>
+   <widget class="QMenu" name="menuLog_Parsing">
+    <property name="title">
+     <string>Log Parsing</string>
+    </property>
+    <addaction name="actionStart_Parsing"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuLog_Parsing"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionOpen">
@@ -109,7 +116,35 @@
     <string>Paste</string>
    </property>
   </action>
+  <action name="actionStart_Parsing">
+   <property name="text">
+    <string>Start Parsing...</string>
+   </property>
+  </action>
  </widget>
+ <tabstops>
+  <tabstop>radio_vi</tabstop>
+  <tabstop>radio_emacs</tabstop>
+  <tabstop>le_name</tabstop>
+  <tabstop>button_go</tabstop>
+ </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>actionQuit</sender>
+   <signal>triggered()</signal>
+   <receiver>BigDemo</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>174</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

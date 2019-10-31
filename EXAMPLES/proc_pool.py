@@ -16,9 +16,9 @@ def my_task(word):  # <4>
 
 
 if __name__ == '__main__':
-    ppool = Pool(POOL_SIZE)  # <5>
+    process_pool = Pool(POOL_SIZE)  # <5>
 
-    WORD_LIST = ppool.map(my_task, WORDS)  # <6>
+    WORD_LIST = process_pool.map(my_task, WORDS)  # <6>
 
     print(WORD_LIST[:20])  # <7>
 
