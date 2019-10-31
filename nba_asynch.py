@@ -7,11 +7,12 @@ import aiohttp
 
 BASE_URL = 'http://stats.nba.com/stats'
 
-HEADERS = {
-    'user-agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) '
-                   'AppleWebKit/537.36 (KHTML, like Gecko) '
-                   'Chrome/45.0.2454.101 Safari/537.36'),
-}
+# HEADERS = {
+#     'user-agent': ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) '
+#                    'AppleWebKit/537.36 (KHTML, like Gecko) '
+#                    'Chrome/45.0.2454.101 Safari/537.36'),
+# }
+HEADERS = {}
 
 DATA_FOLDER = '../TEMP/nba/asynch' # type: str
 
@@ -32,7 +33,7 @@ def main():
 
 async def get_players(player_args):
     endpoint = '/commonallplayers'
-    params = {'leagueid': '00', 'season': '2016-17', 'isonlycurrentseason': '1'}
+    params = {'leagueid': '00', 'season': '2019-20', 'isonlycurrentseason': '1'}
     url = BASE_URL + endpoint
     print('Getting all players...')
     async with aiohttp.ClientSession() as session:

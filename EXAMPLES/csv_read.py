@@ -7,3 +7,10 @@ with open('../DATA/knights.csv') as knights_in:
         print('{:4s} {:9s} {}'.format(
             title, name, quest
         ))
+
+print('-' * 60)
+
+with open('../DATA/knights.csv') as knights_in:
+    rdr = csv.reader(knights_in)  # <1>
+    for row in rdr:  # <2>
+        print(row)
